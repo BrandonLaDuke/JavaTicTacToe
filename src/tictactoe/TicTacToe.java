@@ -39,6 +39,7 @@ public class TicTacToe {
         table[0][0] = row;
         table[1][1] = column;
         return table; // Needs to Return corradants.
+        // I'm trying to create a way to return corrordants to drawScreen() then change a blank to an "O".
     }
     
 //    public static void changeBoard(char player, int row, int column) {
