@@ -12,7 +12,7 @@ public class TicTacToe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        char player = 'o';
+            char player = 'o';
         int row;
         int column;
         boolean winner = false;
@@ -56,13 +56,35 @@ public class TicTacToe {
         System.out.println("  2  " + table[2][0] + "|" + table[2][1] + "|" + table[2][2]);
         System.out.println("     0 1 2 \n");
     }
+       
     
-    public static void checkWinning() {
-        
+    //Check Winning State
+    public boolean checkWin() {
+         if( table [0][0]==table[1][0] && table[1][0] == table[2][0] && (table [0][0]=='x' || table [0][0]=='o')) {
+             return true;
+         } else if( table [0][1]==table[1][1] && table[1][1] == table[2][1] && (table [0][1]=='x' || table [0][1]=='o')) {
+             return true;
+         } else if( table [0][2]==table[1][2] && table[1][2] == table[2][2] && (table [0][2]=='x' || table [0][2]=='o')) {
+             return true;
+         } else if( table [0][0]==table[0][1] && table[0][1] == table[0][2] && (table [0][0]=='x' || table [0][0]=='o')) {
+             return true;
+         } else if( table [1][0]==table[1][1] && table[1][1] == table[1][2] && (table [1][0]=='x' || table [1][0]=='o')) {
+             return true;
+         } else if( table [2][0]==table[2][1] && table[2][1] == table[2][2] && (table [2][0]=='x' || table [2][0]=='o')) {
+             return true;
+         } else if( table [0][0]==table[1][1] && table[1][1] == table[2][2] && (table [0][0]=='x' || table [0][0]=='o')) {
+             return true;
+         } else if( table [2][0]==table[1][1] && table[1][1] == table[0][2] && (table [2][0]=='x' || table [2][0]=='o')) {
+             return true;
+         } else {
+             return false;
+         }
     }
     
-    public static void cpuInput() {
-        
+    public boolean checkTie() {
+        //TODO: Check if game board is filled
+        if ( table )
+        return false;
     }
     
 }
